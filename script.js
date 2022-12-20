@@ -27,36 +27,22 @@ const minutesElement = document.getElementById('minutes');
 const secondsElement = document.getElementById('seconds');
 // console.log(daysElement, hoursElement, minutesElement, secondsElement);
 
-// Dichiaro delle variabili che salvino l'orario attuale.
-const now = new Date();
+// Dichiaro una variabile che salvi l'orario attuale (in millesecondi).
+const now = new Date().getTime();
 // console.log(now);
 
-const currentDays = now.getDate();
-// console.log(currentDays);
+// Dichiaro una variabile che salvi l'orario in cui scatta il Natale (in millesecondi).
+const christmasDate = new Date ("Dec 24, 2022 00:00:00").getTime();
+// console.log(christmasDate);
 
-const currentHours = now.getHours() < 10 ? '0' + now.getHours() : now.getHours();
-// console.log(currentHours);
+// Calcolo quanto manca al natale (in millesecondi).
+const diff = christmasDate - now;
+console.log(diff);
 
-const currentMinutes = now.getMinutes() < 10 ? '0' + now.getMinutes() : now.getMinutes();
-// console.log(currentMinutes);
 
-const currentSeconds = now.getSeconds() < 10 ? '0' + now.getSeconds() : now.getSeconds();
-// console.log(currentSeconds);
 
-const currentTime = `Giorno ${currentDays} ore ${currentHours}:${currentMinutes}:${currentSeconds}`;
-// console.log(currentTime);
 
-// Dichiaro delle variabili che salvino l'orario in cui scatta il Natale.
-const christmasDay = 24;
 
-const christmasHours = '0' + 0;
-
-const christmasMinutes = '0' + 0;
-
-const christmaSeconds = '0' + 0;
-
-const christmasDate = `Giorno ${christmasDay} ore ${christmasHours}:${christmasMinutes}:${christmaSeconds}`;
-console.log(christmasDate);
 
 
 
