@@ -40,6 +40,30 @@ const countDown = setInterval(function() {
     // Calcolo (in millesecondi), la differenza tra la data di Natale e quella attuale.
     const differenceTime = christmasDate - now;
 
+    // Calcolo i giorni mancanti al Natale.
+    const days = Math.floor(differenceTime / (1000 * 60 * 60 * 24));
+  
+    // Calcolo le ore mancanti al Natale.
+    const hours = Math.floor((differenceTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    
+    // Calcolo i minuti mancanti al Natale.
+    const minutes = Math.floor((differenceTime % (1000 * 60 * 60)) / (1000 * 60));
+    
+    // Calcolo i secondi mancanti al Natale.
+    const seconds = Math.floor((differenceTime % (1000 * 60)) / 1000);
+
+    // Stampo in pagina il count down.
+    daysElement.innerText = days;
+    hoursElement.innerText = hours;
+    minutesElement.innerText = minutes;
+    secondsElement.innerText = seconds;
+    
+    // Controllo quando finisce il count down.
+    if (differenceTime <= 0) {
+       clearInterval(countDown);
+     
+    }
+
 
 }, 1000);
 
