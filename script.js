@@ -27,33 +27,42 @@ const minutesElement = document.getElementById('minutes');
 const secondsElement = document.getElementById('seconds');
 // console.log(daysElement, hoursElement, minutesElement, secondsElement);
 
-// Dichiaro una funzione che mi calcoli l'orario attuale
-const logTime = () => {
-    const now = new Date();
-    // console.log(now);
-    
-    const currentDays = now.getDate();
-    // console.log(currentDays);
+// Dichiaro delle variabili che salvino l'orario attuale.
+const now = new Date();
+// console.log(now);
 
-    const currentHours = now.getHours() < 10 ? '0' + now.getHours() : now.getHours();
-    // console.log(currentHours);
-    
-    const currentMinutes = now.getMinutes() < 10 ? '0' + now.getMinutes() : now.getMinutes();
-    // console.log(currentMinutes);
-    
-    const currentSeconds = now.getSeconds() < 10 ? '0' + now.getSeconds() : now.getSeconds();
-    // console.log(currentSeconds);
-    
-    const currentTime = `${currentHours}:${currentMinutes}:${currentSeconds}`;
-    // console.log(currentTime);
+const currentDays = now.getDate();
+// console.log(currentDays);
 
-    return now;
-}
+const currentHours = now.getHours() < 10 ? '0' + now.getHours() : now.getHours();
+// console.log(currentHours);
 
-const currentDate = logTime();
-console.log(currentDate);
+const currentMinutes = now.getMinutes() < 10 ? '0' + now.getMinutes() : now.getMinutes();
+// console.log(currentMinutes);
+
+const currentSeconds = now.getSeconds() < 10 ? '0' + now.getSeconds() : now.getSeconds();
+// console.log(currentSeconds);
+
+const currentTime = `Giorno ${currentDays} ore ${currentHours}:${currentMinutes}:${currentSeconds}`;
+// console.log(currentTime);
+
+// Dichiaro delle variabili che salvino l'orario in cui scatta il Natale.
+const christmasDay = 24;
+
+const christmasHours = '0' + 0;
+
+const christmasMinutes = '0' + 0;
+
+const christmaSeconds = '0' + 0;
+
+const christmasDate = `Giorno ${christmasDay} ore ${christmasHours}:${christmasMinutes}:${christmaSeconds}`;
+console.log(christmasDate);
 
 
+
+
+
+ 
 
 
 
