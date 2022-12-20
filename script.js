@@ -53,17 +53,16 @@ const countDown = setInterval(function() {
     const seconds = Math.floor((differenceTime % (1000 * 60)) / 1000);
 
     // Stampo in pagina il count down.
-    daysElement.innerText = days;
-    hoursElement.innerText = hours;
-    minutesElement.innerText = minutes;
-    secondsElement.innerText = seconds;
+    daysElement.innerText = days < 10 ? '0' + days : days;
+    hoursElement.innerText = hours < 10 ? '0' + hours : hours;
+    minutesElement.innerText = minutes < 10 ? '0' + minutes : minutes; 
+    secondsElement.innerText = seconds < 10 ? '0' + seconds : seconds;
     
     // Controllo quando finisce il count down.
     if (differenceTime <= 0) {
        clearInterval(countDown);
      
     }
-
 
 }, 1000);
 
