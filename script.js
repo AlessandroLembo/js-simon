@@ -27,17 +27,22 @@ const minutesElement = document.getElementById('minutes');
 const secondsElement = document.getElementById('seconds');
 // console.log(daysElement, hoursElement, minutesElement, secondsElement);
 
-// Dichiaro una variabile che salvi l'orario attuale (in millesecondi).
-const now = new Date().getTime();
-// console.log(now);
 
-// Dichiaro una variabile che salvi l'orario in cui scatta il Natale (in millesecondi).
-const christmasDate = new Date ("Dec 24, 2022 00:00:00").getTime();
-// console.log(christmasDate);
+// Dichiaro una funzione per avviare il count down.
+const countDown = setInterval(function() {
+   
+    // Dichiaro una variabile che salvi l'orario in cui scatta il Natale (in millesecondi).
+    const christmasDate = new Date ("Dec 25, 2022 00:00:00").getTime();
+     
+    // Dichiaro una variabile che salvi l'orario attuale (in millesecondi).
+    const now = new Date().getTime();
+    
+    // Calcolo (in millesecondi), la differenza tra la data di Natale e quella attuale.
+    const differenceTime = christmasDate - now;
 
-// Calcolo quanto manca al natale (in millesecondi).
-const diff = christmasDate - now;
-console.log(diff);
+
+}, 1000);
+
 
 
 
