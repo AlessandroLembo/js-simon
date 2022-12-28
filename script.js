@@ -61,6 +61,11 @@ const countDown = setInterval(function() {
     // Controllo quando finisce il count down.
     if (differenceTime <= 0) {
        clearInterval(countDown);
+       
+       daysElement.innerText = '00';
+       hoursElement.innerText = '00';
+       minutesElement.innerText = '00'; 
+       secondsElement.innerText = '00';
      
     }
 
