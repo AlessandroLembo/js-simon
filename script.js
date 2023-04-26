@@ -32,7 +32,7 @@ const secondsElement = document.getElementById('seconds');
 const countDown = setInterval(function() {
    
     // Dichiaro una variabile che salvi l'orario in cui scatta il Natale (in millesecondi).
-    const christmasDate = new Date ("Dec 25, 2022 00:00:00").getTime();
+    const christmasDate = new Date ("Dec 25, 2023 00:00:00").getTime();
      
     // Dichiaro una variabile che salvi l'orario attuale (in millesecondi).
     const now = new Date().getTime();
